@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge"
+/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Disparador Zap</title>
+<link rel="stylesheet" href="styles.css" />
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap");
+body {
+
+background-image: url("https://cdn.wallpapersafari.com/1/80/8DYndB.png");
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+font-family: -apple-system, BlinkMacSystemFont,"Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans","Helvetica Neue", sans-serif;
+}
+
+div {
+background-color: #daf7c1;
+border-radius: 14px;
+box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+padding: 8px 18px;
+margin: 8px;
+width: 320px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+div:hover {
+box-shadow: 0 4px 4px 4px rgba(0, 0, 0, 0.4);
+cursor: pointer;
+}
+
+img {
+width: 40px;
+height: 40px;
+border-radius: 50%;
+}
+
+p {
+font-size: 18px;
+}
+
+</style>
+</head>
+
+<body>
+<div class="card" onclick="mandaZap(this)">
+  <p>Bom dia!</p>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/WhatsApp_logo-color-vertical.svg/2048px-WhatsApp_logo-color-vertical.svg.png"/>
+  </div>
+
+<div class="card" onclick="mandaZap(this)">
+  <p>Boa tarde!</p>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/WhatsApp_logo-color-vertical.svg/2048px-WhatsApp_logo-color-vertical.svg.png"/>
+  </div>
+
+<div class="card" onclick="mandaZap(this)">
+  <p>Boa noite!</p>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/WhatsApp_logo-color-vertical.svg/2048px-WhatsApp_logo-color-vertical.svg.png"/>
+  </div>
+
+<div class="card" onclick="mandaZap(this)">
+  <p>Oi, tudo bem?</p>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/WhatsApp_logo-color-vertical.svg/2048px-WhatsApp_logo-color-vertical.svg.png"/>
+  </div>
+
+  <div class="card" onclick="mandaZap(this)">
+    <p>Como você está?</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/WhatsApp_logo-color-vertical.svg/2048px-WhatsApp_logo-color-vertical.svg.png"/>
+    </div>
+
+    <div class="card" onclick="mandaZap(this)">
+    <p>Como posso te ajudar?</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/WhatsApp_logo-color-vertical.svg/2048px-WhatsApp_logo-color-vertical.svg.png"/>
+    </div>
+
+
+<script>
+  function mandaZap(tag) {
+  const texto = tag.firstElementChild.innerText;
+  const numero = prompt("Para qual número?");
+  const twitterUrl = `https://api.whatsapp.com/send?phone=55${numero}&text=${texto}`;
+  window.open(twitterUrl, "_blank");
+  }
+    </script>
+  </body>
+</html>
